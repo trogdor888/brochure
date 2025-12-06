@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Mic, BarChart3, Heart, Brain, ChevronDown, ArrowRight, ShieldCheck, Sparkles, TrendingUp, Database, Network, Zap, Search, Waypoints, Cpu, Layers, BookOpen, X, Maximize2, MessageSquare, Play, Film, CheckCircle2, AlertCircle, Volume2, Timer } from 'lucide-react';
+import { Mic, BarChart3, Heart, Brain, ChevronDown, ArrowRight, ShieldCheck, Sparkles, TrendingUp, Database, Network, Zap, Search, Waypoints, Cpu, Layers, BookOpen, X, Maximize2, MessageSquare, Play, Film, CheckCircle2, AlertCircle, Volume2, Timer, Edit2, Link, Globe, RefreshCw } from 'lucide-react';
 
 const Button = ({ children, variant = 'primary', className = '', ...props }: any) => {
   const baseStyle = "px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md flex items-center justify-center gap-2";
@@ -369,6 +369,99 @@ const JourneyGallery = () => (
         </div>
 
      </div>
+  </Section>
+);
+
+const CardDetailShowcase = () => (
+  <Section className="bg-[#100F0E] !max-w-none py-20 relative overflow-hidden">
+    {/* Ambient Background */}
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-900/10 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-900/10 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div className="relative z-10 max-w-4xl mx-auto text-center mb-16">
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 font-serif text-white">
+            Customize your cards with high-end AI-gen pictures
+        </h2>
+        <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+             Generate unique, artistic covers for your insights. Make your life journey and memory personal and fun.
+        </p>
+    </div>
+
+    <div className="relative z-10 max-w-5xl mx-auto px-4">
+        {/* The Modal/Card UI */}
+        <div className="bg-[#1C1917]/80 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden relative">
+             {/* Toolbar */}
+             <div className="flex flex-wrap justify-end gap-3 p-4 border-b border-white/5 bg-white/5">
+                <button className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-gray-400 text-xs transition-colors"><Edit2 size={14}/> Edit</button>
+                <button className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-gray-400 text-xs transition-colors"><Link size={14}/> Link User</button>
+                <button className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-gray-400 text-xs transition-colors"><Globe size={14}/> Cosmic</button>
+                
+                {/* Highlighted Feature */}
+                <button className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold shadow-lg shadow-purple-900/50 hover:scale-105 transition-transform">
+                    <Sparkles size={14}/> Generate Cover (AI)
+                </button>
+                
+                <div className="hidden sm:block w-px h-6 bg-white/10 mx-1"></div>
+                <button className="text-gray-500 hover:text-white"><RefreshCw size={14}/></button>
+                <button className="text-gray-500 hover:text-white"><X size={14}/></button>
+             </div>
+
+             {/* Main Card Content */}
+             <div className="p-8 md:p-12 flex flex-col items-center">
+                 {/* Central Image */}
+                 <div className="relative w-64 h-64 md:w-80 md:h-80 mb-8 group cursor-pointer">
+                     <div className="absolute inset-0 bg-gradient-to-tr from-purple-500 to-teal-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                     <img 
+                        src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1000&auto=format&fit=crop" 
+                        alt="AI Generated Concept Art" 
+                        className="relative w-full h-full object-cover rounded-3xl shadow-2xl border border-white/10 transform transition-transform group-hover:scale-[1.02]"
+                     />
+                     <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded border border-white/10 flex items-center gap-1 opacity-100 transition-opacity">
+                        <Sparkles size={10} className="text-purple-400"/> AI Generated
+                     </div>
+                 </div>
+
+                 {/* Title */}
+                 <h3 className="text-2xl md:text-4xl font-bold text-white mb-6 font-serif text-center">Passive Information Acceptance</h3>
+
+                 {/* Tags */}
+                 <div className="flex flex-wrap justify-center gap-3 mb-8">
+                     <span className="px-3 py-1 rounded-full bg-[#2A2624] border border-white/10 text-blue-400 text-xs font-medium">Active</span>
+                     <span className="px-3 py-1 rounded-full bg-[#2A2624] border border-white/10 text-purple-400 text-xs font-medium">Concept</span>
+                     <span className="px-3 py-1 rounded-full bg-[#1E293B] border border-blue-900/30 text-blue-300 text-xs font-medium">Type: behavior</span>
+                     <span className="px-3 py-1 rounded-full bg-[#3F2E18] border border-yellow-900/30 text-yellow-500 text-xs font-medium">High Priority</span>
+                 </div>
+
+                 {/* Description Box */}
+                 <div className="w-full max-w-2xl bg-[#2A2624]/50 rounded-xl p-6 border border-white/5 mb-8">
+                    <p className="text-gray-300 leading-relaxed font-light text-center text-sm md:text-base">
+                        "Lu Fu observed that the daughter was quickly browsing film reviews, likely without deep thought, thus passively accepting information and viewpoints."
+                    </p>
+                 </div>
+
+                 {/* Related Entities */}
+                 <div className="w-full max-w-3xl border-t border-white/5 pt-8">
+                    <div className="text-center text-gray-500 text-xs uppercase tracking-widest mb-4">Related Entities</div>
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#2A2624] border border-white/5 text-gray-300 text-xs md:text-sm hover:bg-[#36302C] transition-colors cursor-pointer">
+                            <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                            Independent Thinking
+                        </div>
+                        <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#2A2624] border border-white/5 text-gray-300 text-xs md:text-sm hover:bg-[#36302C] transition-colors cursor-pointer">
+                            <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                            Film Reviews
+                        </div>
+                        <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#2A2624] border border-white/5 text-gray-300 text-xs md:text-sm hover:bg-[#36302C] transition-colors cursor-pointer">
+                            <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                            Passive Viewpoint Adoption
+                        </div>
+                    </div>
+                 </div>
+             </div>
+        </div>
+    </div>
   </Section>
 );
 
@@ -781,6 +874,7 @@ const App = () => {
         <HowItWorks />
         <DashboardShowcase />
         <JourneyGallery />
+        <CardDetailShowcase />
         <DecisionMastery />
         <TechSpecs />
         <Testimonial />
